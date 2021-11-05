@@ -126,6 +126,15 @@ table tr td{
     float: left;
 }
 
+/* css for login*/
+
+.login{
+    width: 30%;
+    border: 3px solid rgb(3, 90, 253);
+    margin: 10% auto;
+    padding: 2%;
+}
+
 /* css for footer */
 
 .footer{

@@ -77,7 +77,7 @@
 
                             if($res2==true) {
 
-                                $_SESSION['change-pwd'] = "<div class = 'error'>Change Password Successfully. </div>";
+                                $_SESSION['change-pwd'] = "<div class = 'success'>Change Password Successfully. </div>";
                                 header("location:".SITEURL.'admin/manage-admin.php');
                             }
                             else

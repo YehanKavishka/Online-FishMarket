@@ -1,5 +1,9 @@
 <!-- connect Database in all pages -->
-<?php include('../config/constants.php'); ?>
+<?php 
+    include('../config/constants.php'); 
+    include('login-check.php');
+?>
+
 <html>
     <head>
         <title>Online Fish Market - Home Page</title>
@@ -17,6 +21,7 @@
                 <li><a href="manage-shop.php">Shop</a></li>
                 <li><a href="manage-fish-items.php">Fish Items</a></li>
                 <li><a href="manage-order.php">Order</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
         
