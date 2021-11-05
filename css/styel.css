@@ -1,0 +1,519 @@
+/*
+    Author: Yehan;
+    Them: Online Fish Market
+    version 1.0
+*/
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.img-res{
+    width: 100%;
+}
+
+.img-curve{
+    border-radius: 10px;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ff4757;
+}
+
+h2{
+    margin-bottom: 1% ;
+    color: #95a5a6;
+    font-size: 2.5rem;
+    font-family:'Times New Roman', Times, serif;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h4{
+    font-size: 3rem;
+}
+
+h5{
+    margin-bottom: 1% ;
+    color: #c5dbf8;
+    font-size: 6rem;
+    font-family:'Times New Roman', Times, serif;
+}
+
+h6{
+    margin-bottom: auto ;
+    color: #fdfdfd;
+    font-size: 3rem;
+    font-family: cursive;
+}
+
+.float-container{
+    position: relative;
+}
+
+.float-text{
+    position: absolute;
+    left: 30%;
+    padding: 3%;  
+}
+
+.fount-color{
+    color: #34495e;
+}
+
+.btn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 7px;
+}
+.btn-primary{
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover{
+    color: white;
+    background-color: #ff4757;
+}
+
+fieldset{
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+/* css for navbar */
+
+.logo{
+    width: 10%;
+    float: left;
+}
+
+.menu{
+    line-height: 100px;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+
+.menu ul li a{
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.menu ul li a:hover{
+    color: #e74c3c;
+}
+
+.button{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 7px;
+}
+
+.but-color{
+    background-color: #f1c40f;
+    color: white;
+    cursor: pointer;
+}
+
+.but-color:hover{
+    background-color: #95a5a6;
+}
+
+/* css for Search */
+
+.search{
+    background-image:url(../Images/background.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center ;
+    padding: 10% 0;
+}
+
+.search input[type="search"]{
+    width:50%;
+    padding: 1%;
+    font: size 1rem; ;
+    border: none;
+    border-radius: 6px;
+}
+
+/* css for Shops */
+
+.shop{
+    padding: 4% 0;
+}
+
+.Box-1{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 28%;
+    float: left;
+    margin: 2%;  
+}
+
+.add-cart{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 7px;
+}
+.add-cart-primary{
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+}
+
+.add-cart-primary:hover{
+    color: white;
+    background-color: #ff4757;
+}
+
+/* css for Shops_1 */
+
+.featurette-divider {
+    margin: 2rem 0;  /* Space out the Bootstrap <hr> more */
+    
+}
+
+.shop-page-1-background{
+    background-color: cyan;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center ;
+    padding: 8% 0;
+}
+
+.shop-page-1{
+    background-color: #ececec;
+    padding: 4% 0;
+}
+.shop-page-1-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.shop-page-1-img{
+    width: 20%;
+    float: left;
+}
+
+.shop-page-1-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.shop-page-1-food-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+
+.shop-page-1-detail{
+    font-size: 1rem;
+    color: #747d8c;
+}
+
+/*####################################*/
+/* css for Fish Categories */
+
+.fish-categories{
+    background-color: #ecf0f1;
+}
+
+.categories{
+    
+    width: 90%;
+    margin: 5%;
+    padding: 0%;
+    float : left;
+    
+}
+
+.categories-float-text{
+    position: absolute;
+    left: 43%;
+    bottom: 200px;
+}
+
+.categories-float-text-cuttlefish{
+    position: absolute;
+    left: 39%;
+    bottom: 200px;
+}
+
+.categories-fount-color{
+    color: black;
+}
+/*####################################*/
+/* css for Social */
+
+.social-media ul{
+    list-style-type: none;
+}
+
+.social-media ul li{
+    display: inline;
+    padding: 1%;
+}
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* CSS for Food Menu */
+.shop-page{
+    background-color: #ececec;
+    padding: 4% 0;
+}
+.shop-page-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.shop-page-img{
+    width: 20%;
+    float: left;
+}
+
+.shop-page-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.shop-detail{
+    font-size: 1rem;
+    color: #747d8c;
+}
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+/* CSS for Social */
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
+/* for Order Section */
+
+.order-background{
+    background-image: url(../Images/Order_Background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+.order{
+    width: 50%;
+    margin: 0 auto;
+}
+.input-responsive{
+    width: 96%;
+    padding: 1%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.order-label{
+    margin-bottom: 1%; 
+    font-weight: bold;
+}
+
+.cart a{
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* CSS for Cart */
+
+.products-container{
+    max-width: 650px;
+    justify-content: space-around ;
+    margin: 0 auto;
+    margin-top: 50px ;
+}
+
+.products-container ion-icon{
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.products-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightblue;
+    margin: 0 auto;
+}
+
+.products-title{
+    width: 45%;
+}
+
+.price{
+    width: 15%;
+    border-bottom: 4px solid lightblue;
+    display: flex;
+    align-items: center;
+}
+
+.quantity{
+    width: 30%;
+    border-bottom: 4px solid lightblue;
+    display: flex;
+    align-items: center;
+}
+
+.total{
+    width: 10%;
+    border-bottom: 4px solid lightblue;
+    display: flex;
+    align-items: center;
+}
+
+.product{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 4px solid lightblue;
+}
+
+.products{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products img{
+    width: 75px;
+}
+
+.basketTotalContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.basketTotaleTitele{
+    width: 30%;
+}
+
+
+/* css for mobile size */
+
+@media only screen and (max-width:768px){
+    .logo{
+        width: 50%;
+        float: none;
+        margin: 1% auto;
+    }
+
+    .menu ul{
+        text-align: center;
+    }
+
+    .search input[type="search"]{
+        width: 90%;
+        margin-bottom: 5%;
+        padding: 1%;
+    }
+
+    .button{
+        width: 89%;
+        padding: 1%;
+    }
+
+    .search {
+        padding: 10% 0;
+    }
+
+    .shop{
+        padding: 10% 0;
+    }
+
+    h2{
+        margin-bottom: 3% auto;
+    }
+
+
+    .Box-1{
+        width: 96%;
+        margin: 4% auto;
+    }
+
+    .fish-categories{
+        padding: 10% 0;
+    }
+
+    .categories{
+        width: 90%;
+        padding: 1%;
+        margin-bottom: 5%;
+    }
+/*********************************/
+    h4{
+        bottom: 4% ;
+    }
+/********************************/
+
+    .social-media{
+        padding: 5% 0;
+    }
+
+    
+    
+        
+
+}
