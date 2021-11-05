@@ -1,4 +1,3 @@
-
 <?php include('partials/menu.php'); ?>
 
     <!--Main Content section start-->
@@ -20,6 +19,32 @@
                 echo $_SESSION['delete'];// Display session msg
                 unset($_SESSION['delete']);//remove session msg
             }
+
+            if(isset($_SESSION['update']))
+            {
+                echo $_SESSION['update'];// Display session msg
+                unset($_SESSION['update']);//remove session msg
+            }
+
+            if(isset($_SESSION['usesr-not-found']))
+            {
+                echo $_SESSION['usesr-not-found'];// Display session msg
+                unset($_SESSION['usesr-not-found']);//remove session msg
+            }
+
+            if(isset($_SESSION['pwd-not-match']))
+            {
+                echo $_SESSION['pwd-not-match'];// Display session msg
+                unset($_SESSION['pwd-not-match']);//remove session msg
+            }
+
+            if(isset($_SESSION['change-pwd']))
+            {
+                echo $_SESSION['change-pwd'];// Display session msg
+                unset($_SESSION['change-pwd']);//remove session msg
+            }
+
+
         ?>
         <br> <br>
 
@@ -67,7 +92,8 @@
                                         <td><?php echo $full_name; ?></td>
                                         <td><?php echo $username; ?></td>
                                         <td>
-                                            <a href="#" class = "btn-secondary">Update Admin</a>
+                                            <a href="<?php echo SITEURL;?>admin/update-password.php? id=<?php echo $id; ?>"class="btn-primary">Change Password</a>
+                                            <a href="<?php echo SITEURL;?>admin/update-admin.php? id=<?php echo $id; ?>" class = "btn-secondary">Update Admin</a>
                                             <a href="<?php echo SITEURL;?>admin/delete-admin.php? id=<?php echo $id; ?>" class = "btn-danger">Delete Admin</a>
                                         </td>
                                     </tr>
