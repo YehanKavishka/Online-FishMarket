@@ -33,7 +33,7 @@
 </td>
 </tr>
 <tr>
-    <td>Category: </td>
+    <td>Shop : </td>
     <td>
         <select name="category">
                 <?php
