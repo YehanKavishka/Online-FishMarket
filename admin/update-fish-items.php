@@ -35,7 +35,7 @@
         <br> <br>
 
         <form action="" method ="POST" enctype="multipart/form-data">
-        <table>
+        
             <table class ="tbl-30">
                 <tr>
                     <td>Title: </td>
@@ -48,7 +48,7 @@
                 <tr>
                     <td>Description: </td>
                     <td>
-                        <textarea type="description" cols="30" rows ="5"><?php echo $description;?></textarea>
+                        <textarea name="description" cols="30" rows ="5"><?php echo $description;?></textarea>
                     </td>
                 </tr>
 
@@ -156,28 +156,28 @@
 
     <?php
 
-        if(isset($_POST['submit']))
+       if(isset($_POST['submit']))
         {
             $id = $_POST['id'];
             $title = $_POST['title'];
-           /* $description = $_POST['description'];*/
+            $description = $_POST['description'];
             $price = $_POST['price'];
             $current_image = $_POST['current_image'];
             $category = $_POST['category'];
             $featured = $_POST['featured'];
             $active = $_POST['active'];
 
-            /*if(isset($_FILES['image']['name']))
+            if(isset($_FILES['image']['name']))
             {
                 $image_name = $_FILES['image']['name'];
 
-                if($image_name="")
+                if($image_name!="")
                 {
                     $ext = end(explode('.',$image_name));
 
                     $image_name = "Fish-Name-".rand(0000,9999).'.'.$ext;
 
-                    $src_path = $_FILES['image']['temp_name'];
+                    $src_path = $_FILES['image']['tmp_name'];
                     $dest_path = "../Images/fishes/".$image_name;
 
                     $upload = move_uploaded_file($src_path,$dest_path);
@@ -198,11 +198,15 @@
                         {
                             $_SESSION['remove-faile']= "<div class='error'>Failed to remove current image</div>";
                             header('location:'.SITEURL.'admin/manage-fish-items.php');
-                        die();
+                            die();
                         }
 
                     }
 
+                }
+                else
+                {
+                    $image_name = $current_image;
                 }
             }
             else
@@ -215,7 +219,7 @@
             fish_title = '$title',
             description = '$description',
             price = '$price',
-            /*image_name = '$image_name',*/
+            image_name = '$image_name',
             shop_id = '$category_id',
             featured = '$featured',
             active = '$active'
@@ -224,7 +228,7 @@
 
             $res3 =  mysqli_query($conn,$sql3);
 
-            if($res3 == true)
+            if($res3==true)
             {
                 $_SESSION['update'] = "<div class='success'>Fish Item Updated Successfully.</div>";
                 header('location:'.SITEURL.'admin/manage-fish-items.php');
