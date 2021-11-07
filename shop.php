@@ -53,7 +53,7 @@
                         <div class="shop-page-desc">
                             <h3><?php echo $title; ?></h3>
                             <p class="shop-detail">
-                                Made with Italian Sauce, Chicken, and organice vegetables.
+                                Freshly caught Sri Lankan seafood at a fair price.
                             </p>
                             <br>
 

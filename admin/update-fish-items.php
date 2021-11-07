@@ -212,7 +212,7 @@
             else
             {
                 $image_name = $current_image;
-            }*/
+            }
 
             //Update the Fishitems
             $sql3 = "UPDATE fish_items SET
