@@ -34,7 +34,7 @@
                     $title = $row['title'];
                     $image_name= $row['image_name'];
                     ?>
-                        <a href="">
+                        <a href="<?php echo SITEURL; ?>fish-page.php? Shop_id=<?php echo $id; ?>">
                             <div Class="Box-1 float-container">
                                 <?php
                                     //check the image is available or not

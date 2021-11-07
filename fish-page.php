@@ -1,15 +1,45 @@
 <?php include('partials-front/menu.php');?>
 
+<?php
 
+//check the foodid is set or not
+    if(isset($_GET['Shop_id']))
+    {
+        $Shop_id = $_GET['Shop_id'];
+
+        $sql2 = "SELECT * FROM shop WHERE id=$Shop_id";
+        $res2 = mysqli_query($conn,$sql2);
+
+        $count2 = mysqli_num_rows($res2);
+
+        if($count2==1)
+        {
+            $row2 =mysqli_fetch_assoc($res2);
+
+            $S_title = $row2['title'];
+            
+        }
+        else
+        {
+            header('location:'.SITEURL);
+        }
+    }
+    else
+    {
+        header('location:'.SITEURL);
+    }
+
+?>
 <!-- Title start-->
 <section class="shop-page-1-background text-center">
     <div class="container">
             
-        <h5>Ruvala Seafood</h5>
+        <h5><?php echo $S_title; ?></h5>
 
     </div>
 </section>
 <!-- Title  end-->
+
 
 <!-- shops-1 Section Starts Here -->
 <section class="shop-page-1">
@@ -17,7 +47,7 @@
 
     <?php
             //gatting shops to database
-            $sql = "SELECT * FROM fish_items WHERE active ='Yes' AND featured='Yes' LIMIT 6";
+            $sql = "SELECT * FROM fish_items WHERE active ='Yes' AND featured='Yes' AND shop_id = $Shop_id LIMIT 6";
 
             $res = mysqli_query($conn, $sql);
 
@@ -62,7 +92,7 @@
                                 <?php echo $description; ?>
                             </p>
                             <br>
-                            <a href="order.html" class="btn btn-primary"> Order Now </a>
+                            <a href="<?php echo SITEURL; ?>order.php? fish_id=<?php echo $id ?>" class="btn btn-primary"> Order Now </a>
                         </div>
                     </div>
                     <?php

@@ -109,6 +109,16 @@ fieldset{
     padding: 3%;
     border-radius: 5px;
 }
+
+.success{
+    padding: 2%;
+    color: rgb(2, 168, 2);
+}
+
+.error{
+    padding: 2%;
+    color: rgb(240, 75, 75);
+}
 /* css for navbar */
 
 .logo{

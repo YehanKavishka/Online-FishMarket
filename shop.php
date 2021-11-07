@@ -10,6 +10,16 @@
 </section>
 <!-- Title  end-->
 
+<?php
+
+    if(isset($_SESSION['order']))
+    {
+        echo $_SESSION['order'];
+        unset ($_SESSION['order']);
+    }
+
+?>
+
 <!-- shops Section Starts Here -->
 <section class="shop-page text-center">
     <div class="container">
@@ -57,7 +67,7 @@
                             </p>
                             <br>
 
-                            <a href="Shop_1.html" class="btn btn-primary">View Shop</a>
+                            <a href="<?php echo SITEURL; ?>fish-page.php? Shop_id=<?php echo $id; ?>" class="btn btn-primary">View Shop</a>
                         </div>
                     </div>
 

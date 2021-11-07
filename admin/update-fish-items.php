@@ -231,7 +231,7 @@
             if($res3==true)
             {
                 $_SESSION['update'] = "<div class='success'>Fish Item Updated Successfully.</div>";
-                header('location:'.SITEURL.'admin/manage-fish-items.php');
+                //header('location:'.SITEURL.'admin/manage-fish-items.php');
             }
             else
             {
