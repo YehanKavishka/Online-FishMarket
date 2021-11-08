@@ -6,19 +6,22 @@
             
         <h5>Shops</h5>
 
+        <?php
+
+        //grt search key
+        $search = $_POST['search'];
+
+        $sql = "SELECT * FROM shop WHERE title LIKE '%$search%' OR description LIKE '%$search'";
+
+        $res = mysqli_query($conn, $sql);
+
+        $count = mysqli_num_rows($res);
+
+        
+
     </div>
 </section>
 <!-- Title  end-->
-
-<?php
-
-    if(isset($_SESSION['order']))
-    {
-        echo $_SESSION['order'];
-        unset ($_SESSION['order']);
-    }
-
-?>
 
 <!-- shops Section Starts Here -->
 <section class="shop-page text-center">
@@ -63,11 +66,11 @@
                         <div class="shop-page-desc">
                             <h3><?php echo $title; ?></h3>
                             <p class="shop-detail">
-                                Freshly caught Sri Lankan seafood at a fair price.
+                                Made with Italian Sauce, Chicken, and organice vegetables.
                             </p>
                             <br>
 
-                            <a href="<?php echo SITEURL; ?>fish-page.php? Shop_id=<?php echo $id; ?>" class="btn btn-primary">View Shop</a>
+                            <a href="Shop_1.html" class="btn btn-primary">View Shop</a>
                         </div>
                     </div>
 
