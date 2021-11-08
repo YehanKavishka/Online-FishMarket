@@ -3,7 +3,7 @@
 <!--Search Section Start-->
 <section class="search text-center">
     <div class="container">
-        <form action="">
+        <form action="<?php echo SITEURL; ?>shop.php" method="POST">
             <input type="search" name="search" placeholder="Search...">
             <input type="submit" name="submit" value="Search" class="button but-color">
         </form>
@@ -46,7 +46,7 @@
                                     else
                                     {
                                         ?>
-                                            <img src="<?php echo SITEURL;?>images/shops/<?php echo $image_name; ?>"alt="Shop_1" class="img-res img-curve">
+                                            <img src="<?php echo SITEURL;?>Images/shops/<?php echo $image_name; ?>"alt="Shop_1" class="img-res img-curve">
                                         <?php
                                     }
                                 ?>

@@ -1,34 +1,23 @@
 <?php include('partials-front/menu.php');?>
 
+
 <!-- Title start-->
-<section class="search text-center">
+<section class="shop-page-1-background text-center">
     <div class="container">
             
-        <h5>Shops</h5>
-
-        <?php
-
-        //grt search key
-        $search = $_POST['search'];
-
-        $sql = "SELECT * FROM shop WHERE title LIKE '%$search%' OR description LIKE '%$search'";
-
-        $res = mysqli_query($conn, $sql);
-
-        $count = mysqli_num_rows($res);
-
-        
+        <h5>Ruvala Seafood</h5>
 
     </div>
 </section>
 <!-- Title  end-->
 
-<!-- shops Section Starts Here -->
-<section class="shop-page text-center">
+<!-- shops-1 Section Starts Here -->
+<section class="shop-page-1">
     <div class="container">
-        <?php
+
+    <?php
             //gatting shops to database
-            $sql = "SELECT * FROM shop WHERE active ='Yes' AND featured='Yes' LIMIT 6";
+            $sql = "SELECT * FROM fish_items WHERE active ='Yes' AND featured='Yes' LIMIT 6";
 
             $res = mysqli_query($conn, $sql);
 
@@ -41,13 +30,15 @@
                 {
                     //get the value 
                     $id = $row['id'];
-                    $title = $row['title'];
+                    $title = $row['fish_title'];
+                    $price = $row['price'];
+                    $description = $row['description'];
                     $image_name= $row['image_name'];
                     ?>
+                    <div class="shop-page-1-box">
+                        <div class="shop-page-1-img">
 
-                    <div class="shop-page-box">
-                        <div class="shop-page-img">
-                            <?php
+                        <?php
                             //check the image is available or not
                                 if($image_name =="")
                                 {
@@ -57,37 +48,33 @@
                                 else
                                 {
                                     ?>
-                                        <img src="<?php echo SITEURL;?>images/shops/<?php echo $image_name; ?>"alt="Shop_1" class="img-res img-curve">
+                                        <img src="<?php echo SITEURL;?>images/fishes/<?php echo $image_name; ?>"alt="Fish Items" class="img-res img-curve">
                                     <?php
                                 }
                             ?>
+                            
                         </div>
 
-                        <div class="shop-page-desc">
+                        <div class="shop-page-1-desc">
                             <h3><?php echo $title; ?></h3>
-                            <p class="shop-detail">
-                                Made with Italian Sauce, Chicken, and organice vegetables.
+                            <p class="shop-page-1-food-price"><?php echo $price; ?></p>
+                            <p class="shop-page-1-detail">
+                                <?php echo $description; ?>
                             </p>
                             <br>
-
-                            <a href="Shop_1.html" class="btn btn-primary">View Shop</a>
+                            <a href="order.html" class="btn btn-primary"> Order Now </a>
                         </div>
                     </div>
-
                     <?php
                 }
             }
             else
             {
                 //shops not available
-                echo "<div class='error'>Shops not available</div>";
+                echo "<div class='error'>Fish Items not available</div>";
+
             }
-
-        ?>
-
-        
-
-
+    ?>
         <div class="clearfix"></div>
     </div>
 </section>
