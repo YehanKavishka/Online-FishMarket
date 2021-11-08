@@ -28,7 +28,7 @@
 
 ?>
 
-<div class = 'main-content'>
+<div class = "main-content">
     <div class ="wrapper">
     
         <h1>Update Fish Items</h1>
