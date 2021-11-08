@@ -27,7 +27,7 @@
                     <a href="<?php echo SITEURL; ?>shop.php">Shops</a>
                 </li>
                 <li>
-                    <a href="#">About us</a>
+                    <a href="<?php echo SITEURL; ?>about-us.html">About us</a>
                 </li>
                 <li>
                 <a href="<?php echo SITEURL; ?>Contact.html">Contact</a>
